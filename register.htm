@@ -1,0 +1,128 @@
+<html>
+	<head>
+		<!-- style css-->
+		<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+		<!-- jquery-->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+		<!-- fontawesome bootstrap-->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+		<script>
+			// Remove trans on page load
+		
+			var promo_text = "ᴇᴇᴠᴇᴇ.ᴡɪɴ";
+			var changing = true;
+			var wait = 0;
+	
+			//Promo text
+			setInterval(function(){
+				var ind = "<span class='indicator'>|</span>";
+				var el = document.getElementById("promo-text");
+				var current_text = el.innerHTML.split("<span")[0];
+				if(wait > 0)
+				{
+					wait--;
+					return;
+				}
+				if(changing) 
+				{
+					if(current_text.length < promo_text.length) 
+						el.innerHTML = promo_text.substring(0, current_text.length+1)+ind;
+					else {
+						changing = false;
+						wait = 4;
+					}
+				} else {
+					if(current_text.length > 0) {
+						el.innerHTML = promo_text.substring(0, current_text.length-1)+ind;
+					}
+					else changing = true;
+				}
+			}, 500);
+		</script>
+	</head>
+	<body class="preload">
+		<div class="hue-line"></div>
+		<div class="header">
+			<div class="content">
+				<div class="content-logo" id="promo-text"><span class='indicator'>|</span></div>
+				<div class="content-header">
+					<ul>
+					  <li><a href="index.htm">home</a></li>
+					  <li><a href="forum.htm">forum</a></li>
+					  <li><a href="#">about</a></li>
+					</ul> 
+				</div>
+			</div>
+		</div>
+
+		<div class="content">	
+			<div class="content-box">
+				<legend><h4>Sign up</h4></legend>
+				<br/>
+				<div class="content-description">
+					<p>To sign up, please fill in the form below.</p>				
+				</div>
+				<br/>
+			</div>
+			<br/>
+			<form>
+				<div class="content-box">
+					<fieldset>
+						<legend><h4>Username</h4></legend>
+						<br/>
+						<div class="infield">
+							<p>Please enter a username u want to be shown.</p>
+							<input name="req-username" maxlength="24" size="16" />
+						</div>
+						<br/>
+					</fieldset>
+				</div>
+				<br/>
+				<div class="content-box">
+					<fieldset>
+						<legend><h4>E-Mail</h4></legend>
+						<br/>
+						<div class="infield">
+							<p>Please enter a valid email adress.</p>
+							<input name="req-email" type="email" maxlength="100" size="16" />
+						</div>
+						<br/>
+					</fieldset>
+				</div>
+				<br/>
+				<div class="content-box">
+					<fieldset>
+						<legend><h4>Password</h4></legend>
+						<br/>
+						<div class="infield">
+							<p>Please enter a strong password.</p>
+							<input name="req-password" type="password" maxlength="100" size="16" />
+						</div>
+						<br/>
+						<div class="infield">
+							<p>Please confirm your password.</p>
+							<input name="req-password2" type="password" maxlength="100" size="16" />
+						</div>
+						<br/>
+											
+					</fieldset> 
+				</div>
+				<br/>
+				<div class="content-box">
+					<fieldset>
+						<legend><h4>Human verification</h4></legend>
+						<br/>
+						<div class="infield">
+							<p>Please verify that you are a human.</p>
+						</div>
+						<br/>
+					</fieldset>
+				</div>
+				<br/>
+				<div class="content-button">
+					<button type="button" id="sign_up"><h4>Sign up</h4></button>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>

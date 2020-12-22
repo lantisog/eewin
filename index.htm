@@ -1,0 +1,259 @@
+<html>
+	<head>
+		<!-- style css-->
+		<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+		<!-- jquery-->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+		<!-- fontawesome bootstrap-->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+		<script>
+			// Remove trans on page load
+		
+			var promo_text = "ᴇᴇᴠᴇᴇ.ᴡɪɴ";
+			var changing = true;
+			var wait = 0;
+	
+			//Promo text
+			setInterval(function(){
+				var ind = "<span class='indicator'>|</span>";
+				var el = document.getElementById("promo-text");
+				var current_text = el.innerHTML.split("<span")[0];
+				if(wait > 0)
+				{
+					wait--;
+					return;
+				}
+				if(changing) 
+				{
+					if(current_text.length < promo_text.length) 
+						el.innerHTML = promo_text.substring(0, current_text.length+1)+ind;
+					else {
+						changing = false;
+						wait = 4;
+					}
+				} else {
+					if(current_text.length > 0) {
+						el.innerHTML = promo_text.substring(0, current_text.length-1)+ind;
+					}
+					else changing = true;
+				}
+			}, 500);
+		</script>
+	</head>
+	<body class="preload">
+		<div class="hue-line"></div>
+		<div class="header">
+			<div class="content">
+				<div class="content-logo" id="promo-text"><span class='indicator'>|</span></div>
+				<div class="content-header">
+					<ul>
+					  <li><a href="#">home</a></li>
+					  <li><a href="forum.htm">forum</a></li>
+					  <li><a href="#">about</a></li>
+					</ul> 
+				</div>
+			</div>
+		</div>
+
+		<div class="content">	
+			
+			
+
+			<div class="content-box">
+				<legend><h4>The first look</h4></legend>
+				<br/>
+				<div class="content-description">
+					<p>We offer you a fully functional cheat which is very easy to handle. Our Cheat offers over 20 modules to be ahead your enemies. Get your own impression – all features are listed below.</p>
+				</div>
+				<br/>
+				<div class="content-table">
+					<ul>
+						<li>
+							<table>								
+								<tr>
+									<th>Ragebot</th>
+								</tr>
+								<tr>
+									<td>
+										<div>Enabled</div>
+										<div class="content-tooltip-icon"><i class="fas fa-info-circle"></i><span class="content-tooltip">Master switch.</span></div>
+									</td>											
+								</tr>
+								<tr>
+									<td>
+										<div>Target selection</div>
+										<div class="content-tooltip-icon"><i class="fas fa-info-circle"></i><span class="content-tooltip">Select your target by health, distance or custom.</span></div>
+									</td>											
+								</tr>
+								<tr>
+									<td>
+										<div>Resolver</div>
+										<div class="content-tooltip-icon"><i class="fas fa-info-circle"></i><span class="content-tooltip">Resolve your enemies anti-aim to never miss a shot.</span></div>
+									</td>											
+								</tr>
+								<tr>
+									<td>
+										<div>Fake lag</div>
+										<div class="content-tooltip-icon"><i class="fas fa-info-circle"></i><span class="content-tooltip">Make you look laggy and break the enemies resolver.</span></div>
+									</td>											
+								</tr>
+								<tr>
+									<td>
+										<div>Exploits</div>
+										<div class="content-tooltip-icon"><i class="fas fa-info-circle"></i><span class="content-tooltip">Exploit the game by shifting the tickbase. Double tap your enemies and hide your shots.</span></div>
+									</td>											
+								</tr>
+								<tr>
+									<td>
+										<div>Extended Backtrack</div>
+										<div class="content-tooltip-icon"><i class="fas fa-info-circle"></i><span class="content-tooltip">Extend your backtrack distance by raising your ping.</span></div>
+									</td>											
+								</tr>
+								<tr>
+									<td>
+										<div>Anti-aim</div>
+										<div class="content-tooltip-icon"><i class="fas fa-info-circle"></i><span class="content-tooltip">Choose between many options such as At target, Jitter, Desync or even custom made anti-aims (LUA).</span></div>
+									</td>											
+								</tr>
+							</table>
+						</li>
+						<li>
+							<table>								
+								<tr>
+									<th>Legitbot</th>
+								</tr>
+								<tr>
+									<td>
+										<div>Enabled</div>
+										<div class="content-tooltip-icon"><i class="fas fa-info-circle"></i><span class="content-tooltip">Master switch.</span></div>
+									</td>											
+								</tr>
+								<tr>
+									<td>
+										<div>Weapon control</div>
+										<div class="content-tooltip-icon"><i class="fas fa-info-circle"></i><span class="content-tooltip">Setup every weapon individual.</span></div>
+									</td>											
+								</tr>
+								<tr>
+									<td>
+										<div>Legit anti-aim</div>
+										<div class="content-tooltip-icon"><i class="fas fa-info-circle"></i><span class="content-tooltip">Let your opponents miss their shot due to legit anti-aim.</span></div>
+									</td>											
+								</tr>
+								<tr>
+									<td>
+										<div>Backtrack</div>
+										<div class="content-tooltip-icon"><i class="fas fa-info-circle"></i><span class="content-tooltip">Backtrack your enemies to their last location.</span></div>
+									</td>											
+							</table>
+						</li>
+						<li>
+							<table>								
+								<tr>
+									<th>Misc & Visuals</th>
+								</tr>
+								</tr>
+																<tr>
+									<td>
+										<div>ESP</div>
+										<div class="content-tooltip-icon"><i class="fas fa-info-circle"></i><span class="content-tooltip">See your opponents through walls.</span></div>
+									</td>											
+								</tr>
+								</tr>
+								<tr>
+									<td>
+										<div>Chams</div>
+										<div class="content-tooltip-icon"><i class="fas fa-info-circle"></i><span class="content-tooltip">Color your's, your teammate's or your enemies player model to see it more clear.</span></div>
+									</td>											
+								</tr>								
+								</tr>
+								<tr>
+									<td>
+										<div>Radar & Cloud</div>
+										<div class="content-tooltip-icon"><i class="fas fa-info-circle"></i><span class="content-tooltip">Use radar to look up your enemies on your mini map. Share your cloud radar with your friends. They will also see where their enemies at.</span></div>
+									</td>											
+								</tr>
+							</table>
+						</li>
+					</ul>
+				</div>
+				<br/>
+				<div class="content-table">
+					<ul>
+						<li>
+							<table>								
+								<tr>
+									<th>User</th>
+								</tr>
+								</tr>
+								<tr>
+									<td>
+										<div>Restrictions</div>
+										<div class="content-tooltip-icon"><i class="fas fa-info-circle"></i><span class="content-tooltip">Untrusted ban? Make restrictions. We offer you what's needed to avoid getting an untrusted ban.</span></div>
+									</td>											
+								</tr>
+								</tr>
+								<tr>
+									<td>
+										<div>Live updates</div>
+										<div class="content-tooltip-icon"><i class="fas fa-info-circle"></i><span class="content-tooltip">Updates will be made while playing. No restart is needed.</span></div>
+									</td>											
+								</tr>								
+								</tr>
+							</table>
+						</li>
+						<li>
+							<table>								
+								<tr>
+									<th>Config</th>
+								</tr>
+								</tr>
+								<tr>
+									<td>
+										<div>Configurations</div>
+										<div class="content-tooltip-icon"><i class="fas fa-info-circle"></i><span class="content-tooltip">Configuring a cheat has never been easier. Copy to - or import configs from your clipboard.</span></div>
+									</td>											
+								</tr>
+								</tr>
+								<tr>
+									<td>
+										<div>Cloud based</div>
+										<div class="content-tooltip-icon"><i class="fas fa-info-circle"></i><span class="content-tooltip">All configs are stored in a cloud. If you want to reset your pc for example, no configs will be lost.</span></div>
+									</td>											
+								</tr>								
+								</tr>
+								<tr>
+									<td>
+										<div>Lua script items</div>
+										<div class="content-tooltip-icon"><i class="fas fa-info-circle"></i><span class="content-tooltip">Settings made by Luas will be saved in your config.</span></div>
+									</td>											
+								</tr>
+								<tr>
+									<td>
+										<div>Skin configurations</div>
+										<div class="content-tooltip-icon"><i class="fas fa-info-circle"></i><span class="content-tooltip">Seperate your skin loadouts from your configs.</span></div>
+									</td>											
+								</tr>
+							</table>
+						</li>
+						<li>
+							<table>								
+								<tr>
+									<th>Lua</th>
+								</tr>
+								</tr>
+								<tr>
+									<td>
+										<div>Lua scripting support</div>
+										<div class="content-tooltip-icon"><i class="fas fa-info-circle"></i><span class="content-tooltip">Extend your experience with custom lua scripts.</span></div>
+									</td>											
+								</tr>
+							</table>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</body>
+</html>
